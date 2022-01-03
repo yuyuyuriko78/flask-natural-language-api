@@ -1,9 +1,7 @@
 from flask import Flask, render_template, request
 from google.cloud import language_v1
-from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)
 
 
 @app.route('/')
