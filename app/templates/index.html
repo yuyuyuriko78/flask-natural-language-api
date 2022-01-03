@@ -62,13 +62,10 @@
                         console.log(this.formData)
                         axios.post('/apisample', this.formData)
                         .then(response => {
-                            console.log(response)
-                            console.log(response.data)
                             str1 = response.data
                             str2 = (str1.replace('[', '')).replace(']', '')
                             arr1 = str2.split('{')
                             arr2 = arr1.slice(1)
-                            console.log(arr2)
                             this.results = arr2
                         })
                         .catch(error => {

@@ -52,14 +52,11 @@ def analyze_sentiment():
     # APIに渡すテキストを整形
     text_for_analysis = request.get_json()
     document = {'content': text_for_analysis['text'], 'type_': 'PLAIN_TEXT'}
-    print('=============================')
-    print(text_for_analysis)
-    print(document)
-    print('=============================')
 
     # APIを実行
     response = client.analyze_sentiment(request={'document': document})
 
+    # 最終的に返す配列
     results = []
 
     # 文章ごとに結果を取得
